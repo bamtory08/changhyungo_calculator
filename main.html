@@ -2,37 +2,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+    <meta charset="EUC-KR">
+    <title>Insert title here</title>
 
-<script>
+    <script>
 
-function check(){
-	
-	x=parseInt(document.test.a.value); // 웹페이지에 form 네임값에 a 에있는 value 값 =100;
-	y=parseInt(document.test.b.value); // 웹페이지에 form 네임값에 b 에있는 value 값 =100;
-	
-	document.write(x+y+"<br>"); // 100+100 = 200
-	document.write(x-y+"<br>"); // 100 - 100 = 0
-	document.write(x*y+"<br>"); // 100 * 100 =10000
-	document.write(x/y+"<br>"); // 100 / 100 = 1
-	document.write(x%y+"<br>");//
-}
+        function check(){
+            
+            x=parseInt(document.test.a.value); // 웹페이지에 form 네임값에 a 에있는 value 값 =100;
+            y=parseInt(document.test.b.value); // 웹페이지에 form 네임값에 b 에있는 value 값 =100;
+            
+            document.write(x+y+"<br>"); // 100+100 = 200
+            document.write(x-y+"<br>"); // 100 - 100 = 0
+            document.write(x*y+"<br>"); // 100 * 100 =10000
+            document.write(x/y+"<br>"); // 100 / 100 = 1
+            document.write(x%y+"<br>");//
+        }
 
-</script>
+    </script>
 
 
 </head>
 <body>
+    <p>뭐지 왜 안되는거야ㅜ</p>
 
 
-<form name="test">
+    <form name="test">
 
-<input type="text" name="a" value="100">
-<input type="text" name="b" value="100">
-<input type="button" value="사칙연산" onclick="check()">
+        <input type="text" name="a" value="100">
+        <input type="text" name="b" value="100">
+        <input type="button" value="사칙연산" onclick="check()">
 
-</form>
+    </form>
 
 
 </body>
