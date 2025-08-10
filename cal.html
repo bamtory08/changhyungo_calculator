@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="EUC-KR">
+    <title>Insert title here</title>
+    <h1>
+        창현고 등급계산기!!!!!!!!!!!!!!!!
+    </h1>
+
+    <script>
+
+        function calcNow1(){
+            calc1.result_minus.value = calc1_minus(calc1.h.value, calc1.i.value, calc1.j.value, calc1.k.value, calc1.l.value, calc1.m.value, calc1.n.value, );
+        }
+        function calcNow(){
+            calc.result_plus.value = calc_plus(calc.a.value, calc.b.value, calc.c.value, calc.d.value, calc.e.value, calc.f.value, calc.g.value, );
+        }
+            function calc1_minus(h, i, j, k, l, m, n){
+                return (Number(j) * 4 + (Number(h) + Number(i) + Number(k) + Number(l) + Number(m))* 3 + Number(n) * 2)/ 21
+            }
+            
+            
+            function calc_plus(a, b, c, d, e, f, g){
+                return ((Number(a) + Number(b) + Number(c)) * 4 + (Number(d) + Number(e) + Number(f))* 3 + Number(g) * 2)/ 23
+            }
+            
+        
+
+
+    </script>
+
+
+</head>
+<body>
+
+    <p>
+        등급 계산: 단순한 평균 계산 (x)
+        <br>이수단위에 따른 가중치 평균 계산 (o)
+        <br>계산하는 법: ( (과목별 등급)x(과목별 이수단위)를 모두 더한 값 )/총 단위 수의 합
+        <br>ex: 국영수 등급 =( 국어 단위 수 x 등급 + 영어 단위 수 x 등급 + 수학 단위 수 x 등급 )/총 단위 수의 합
+    </p>
+    <h2>
+        1학년 ver!!
+    </h2>
+
+    <form name="calc1">
+        등급을 입력하세요 !!
+        <br>국어(3) <input type="text" name="h"  /> 
+        <br>영어(3) <input type="text" name="i" /> 
+        <br>수학(4) <input type="text" name="j" /> 
+        <br>한국사(3) <input type="text" name="k" /> 
+        <br>통합사회(3) <input type="text" name="l" /> 
+        <br>통합과학(3) <input type="text" name="m" /> 
+        <br>기술가정(2) <input type="text" name="n" /> 
+        <input type="button" value="계산" onclick="calcNow1()">
+        <br> <input type="text" name="result_minus" value="계산 버튼을 눌러주세요 !!" readonly /> 등급
+    
+    </form>
+
+    <h2>
+        2학년 ver!!
+    </h2>
+
+    <form name="calc">
+        등급을 입력하세요 !!
+        <br>국어(4) <input type="text" name="a"  /> 
+        <br>영어(4) <input type="text" name="b" /> 
+        <br>수학(4) <input type="text" name="c" /> 
+        <br>탐구 A(3) <input type="text" name="d" /> 
+        <br>탐구 B(3) <input type="text" name="e" /> 
+        <br>탐구 C(3) <input type="text" name="f" /> 
+        <br>외국어(2) <input type="text" name="g" /> 
+        <input type="button" value="계산" onclick="calcNow()">
+        <br> <input type="text" name="result_plus" value="계산 버튼을 눌러주세요 !!" readonly /> 등급
+
+    </form>
+
+
+
+</body>
+</html>
