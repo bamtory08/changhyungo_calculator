@@ -3,29 +3,38 @@
 <html>
 <head>
     <meta charset="EUC-KR">
-    <title>창현고 등급계산기</title>
+    <title >창현고 등급계산기</title>
     <link rel="icon" href="lucky.jpg">
-    <h1 style="color: rgb(22, 126, 19);">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
+    </style>
+    <h1 style="font-family: Dokdo; color: rgb(105, 119, 42); font-size: 50px;">
         창현고 등급계산기
     </h1>
-    <img src="genious.jpg" alt="천재" width="200" height="140" align="right">
 
     <script>
 
         function calcNow1(){
             calc1.result_minus.value = calc1_minus(calc1.h.value, calc1.i.value, calc1.j.value, calc1.k.value, calc1.l.value, calc1.m.value, calc1.n.value, );
         }
+        function calcNow2(){
+            calc2.result_mid2.value = calc2_mid2(calc2.o.value, calc2.p.value, calc2.q.value, calc2.r.value, calc2.s.value, calc2.t.value, );
+        }
         function calcNow(){
             calc.result_plus.value = calc_plus(calc.a.value, calc.b.value, calc.c.value, calc.d.value, calc.e.value, calc.f.value, calc.g.value, );
         }
-            function calc1_minus(h, i, j, k, l, m, n){
-                return (Number(j) * 4 + (Number(h) + Number(i) + Number(k) + Number(l) + Number(m))* 3 + Number(n) * 2)/ 21
-            }
+
+        function calc1_minus(h, i, j, k, l, m, n){
+            return (Number(j) * 4 + (Number(h) + Number(i) + Number(k) + Number(l) + Number(m))* 3 + Number(n) * 2)/ 21
+        }
+
+        function calc2_mid2(o, p, q, r, s, t){
+            return ((Number(o) + Number(p) + Number(q)) * 4 + (Number(r) + Number(s) + Number(t))* 3 )/ 21
+        }        
             
-            
-            function calc_plus(a, b, c, d, e, f, g){
-                return ((Number(a) + Number(b) + Number(c)) * 4 + (Number(d) + Number(e) + Number(f))* 3 + Number(g) * 2)/ 23
-            }
+        function calc_plus(a, b, c, d, e, f, g){
+            return ((Number(a) + Number(b) + Number(c)) * 4 + (Number(d) + Number(e) + Number(f))* 3 + Number(g) * 2)/ 23
+        }
             
         
 
@@ -51,8 +60,8 @@
     </h2>
 
     <form name="calc1">
-        등급을 입력하세요 !!
-        <br>국어(3) <input type="text" name="h"  /> 
+        <p style="color: rgb(51, 74, 117);">등급을 입력하세요 !!</p>
+        국어(3) <input type="text" name="h"  /> 
         <br>영어(3) <input type="text" name="i" /> 
         <br>수학(4) <input type="text" name="j" /> 
         <br>한국사(3) <input type="text" name="k" /> 
@@ -65,12 +74,29 @@
     </form>
 
     <h2>
-        2학년 ver
+        2학년 중간(제2 외국어 포함 x)
+    </h2>
+
+    <form name="calc2">
+        <p style="color: rgb(51, 74, 117);">등급을 입력하세요 !!</p>
+        국어(4) <input type="text" name="o"  /> 
+        <br>영어(4) <input type="text" name="p" /> 
+        <br>수학(4) <input type="text" name="q" /> 
+        <br>탐구 A(3) <input type="text" name="r" /> 
+        <br>탐구 B(3) <input type="text" name="s" /> 
+        <br>탐구 C(3) <input type="text" name="t" /> 
+        <input type="button" value="계산" onclick="calcNow2()">
+        <br> <input type="text" name="result_mid2" value="계산 버튼을 눌러주세요 !!" readonly /> 등급
+
+    </form>
+
+    <h2>
+        2학년 기말(제2 외국어 포함 o)
     </h2>
 
     <form name="calc">
-        등급을 입력하세요 !!
-        <br>국어(4) <input type="text" name="a"  /> 
+        <p style="color: rgb(51, 74, 117);">등급을 입력하세요 !!</p>
+        국어(4) <input type="text" name="a"  /> 
         <br>영어(4) <input type="text" name="b" /> 
         <br>수학(4) <input type="text" name="c" /> 
         <br>탐구 A(3) <input type="text" name="d" /> 
@@ -81,10 +107,11 @@
         <br> <input type="text" name="result_plus" value="계산 버튼을 눌러주세요 !!" readonly /> 등급
 
     </form>
-    <p>2학년 9반 화이팅!!</p>
 
-<img src="next.jpg" alt="화이팅" width="200" height="200"> 
-<img src="lucky.jpg" alt="화이팅" width="200" height="200">
+    <p>2학년 9반 화이팅!!</p>
+    <img src="lucky.jpg" alt="천재" width="200" height="180">
+
+
 
 </body>
 </html>
